@@ -1,0 +1,782 @@
+/*清除全部样式*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: "Microsoft YaHei";
+    background: #f5f6f7;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+}
+input, textarea {
+    background:none;
+    outline: none;
+    border: none;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+}
+button {
+    outline: none;
+    border: none;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+.fl {
+    /*左浮动*/
+    float: left
+}
+.fr {
+    /*右浮动*/
+    float: right
+}
+.cf{
+    /*清除浮动*/
+    clear: both;
+}
+.tl {
+    /*左对齐*/
+    text-align: left;
+}
+.tc {
+    /*居中*/
+    text-align: center
+}
+.tr {
+    /*右对齐*/
+    text-align: right;
+}
+/*淡入动画开始*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+    /*结束状态 透明度为1*/
+}
+@-webkit-keyframes fade-in { /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*淡入动画结束*/
+
+.HomeTop {
+    width: 100%;
+    max-height: 74%;
+}
+
+.HomeTopImg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.HomeTopNav {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top:5%;
+}
+
+.HomeTopNav li {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.HomeTopNav li a{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.HomeTopNav li img {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+}
+
+.HomeTopSearch {
+    width: 70%;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top:70%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    -moz-box-shadow: 0px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 0px 5px 5px #ccc;
+    padding: 20px;
+}
+
+.HomeTopSearch input {
+    float: left;
+    font-size: 25px;
+    color: #2c2c2c;
+    vert-align: middle;
+    width: 85%;
+    border-right: 1px solid #2c2c2c;
+}
+
+.HomeTopSearch img {
+    float: left;
+    height: 32px;
+    width: 3%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.HomeTopSearch button {
+    background: #FF5A5F;
+    float: left;
+    color: #fff;
+    font-size: 25px;
+    vertical-align: middle;
+    text-align: center;
+    width: 10%;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+.HomeTopNote {
+    width: 70%;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.HomeTopNote h1,h2 {
+    color: #fff;
+}
+
+.LoginVideo {
+    /*视频背景播放器样式*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.LoginCover {
+    /*视频播放器封面*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../data/Amalfi.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.LoginOverlay {
+    /*透明蒙板*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.HomeOverlay {
+    /*透明蒙板*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
+}
+
+.LoginBg {
+    /*登录框*/
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translatex(-50%);
+    animation: fade-in; /*动画名称*/
+    animation-duration: 1.5s; /*动画持续时间*/
+    -webkit-animation: fade-in 1.5s; /*针对webkit内核*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.LoginBg h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.LoginEditBg {
+    /*文本输入框背景*/
+    width: auto;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin: auto;
+    padding: 10px;
+}
+
+.LoginEditBg input {
+    /*输入框样式*/
+    font-size: 20px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+.LoginEditBg img {
+    /*图片样式*/
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.LoginButton {
+    /*登录按钮*/
+    background: url('../image/icon/登录.png') no-repeat;
+    background-size: 60px 60px;
+    border: 0;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-animation-name: scaleDraw; /*关键帧名称*/
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+    -webkit-animation-iteration-count: infinite;  /*动画播放的次数*/
+    -webkit-animation-duration: 5s; /*动画所花费的时间*/
+}
+
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0%{
+        transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+}
+
+.BaseNav {
+    /*通用的顶部导航栏*/
+    width: 100%;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #2c2c2c;
+    vertical-align: middle;
+}
+
+.BaseBottom {
+    height: 45px;
+    font-size: 15px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid #2c2c2c;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.BaseNav li {
+    display:inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+}
+
+.BaseNav li img {
+    height: 40px;
+}
+
+.BaseNav li a {
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.BaseNavLogoTitle {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.BackBg {
+    width: 100%;
+    height: 100%;
+    background: url("../image/adminbg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.BaseMain {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    bottom: 45px;
+    overflow-y: auto;
+    background: #1e272e;
+}
+
+.BackLeft {
+    float: left;
+    width: 15%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.BackLeft li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    background: #485460;
+    margin-bottom: 10px;
+}
+
+.BackLeft li:hover {
+    background: #FF5A5F;
+}
+
+.BackLeft li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.BackRight {
+    display: inline-block;
+    width: 85%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    background: #fff;
+    border: 10px solid #1e272e;
+}
+
+.BackMain {
+    display: none;
+}
+
+.BackRouteItem {
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.HomeMain {
+    width: 70%;
+    position: absolute;
+    top:81%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #2c2c2c;
+}
+
+.HomeMain h3 {
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.HomeMainCard {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.HomeMainCard img {
+    width: 100%;
+    height: 200px;
+}
+
+.HomeMainCard img:hover + .HomeMainCardCov{
+    display: block;
+}
+
+.HomeMainCardCov {
+    display: none;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 70%;
+    height: 200px;
+    position: absolute;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    color: #fff;
+    z-index: 9999;
+    padding: 10px;
+}
+
+.HomeMainCardCov h5 {
+    margin-bottom: 10px;
+}
+
+.HomeMainCardCov p {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+
+.HomeLoginBg {
+    /*登录框*/
+    width: 40%;
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translatex(-50%);
+    animation: fade-in; /*动画名称*/
+    animation-duration: 1.5s; /*动画持续时间*/
+    -webkit-animation: fade-in 1.5s; /*针对webkit内核*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #2c2c2c;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e6e6e6;
+    z-index: 999999;
+    display: none;
+}
+
+.HomeLoginBg input {
+    margin-bottom: 20px;
+    color: #2c2c2c;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.HomeLoginBg button {
+    background: #FF5A5F;
+    color: #fff;
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+
+.sigma-content{
+    text-align: center;
+    background-color: #fff;
+}
+.sigma-middle-line:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #2c2c2c;/*颜色需与主题大背景色一致*/
+    position: relative;
+    top: 10px;/*调节线高*/
+    left: 0;
+}
+.sigma-line-text{
+    display: inline-block;
+    background: #fff;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.SearchNav {
+    /*通用的顶部导航栏*/
+    width: 100%;
+    /*设置文本不可选中*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.SearchBottom {
+    height: 45px;
+    font-size: 15px;
+    width: 100%;
+    color: #2c2c2c;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.SearchNav li {
+    display:inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    color: #2c2c2c;
+    height: 60px;
+}
+
+.SearchNav li img {
+    height: 40px;
+}
+
+.SearchNav li a {
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #2c2c2c;
+    text-decoration: none;
+}
+
+.SearchNavLogoTitle {
+    color: #FF5A5F !important;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.SearchBg {
+    color: #2c2c2c;
+    -moz-box-shadow: 0px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 0px 5px 5px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.SearchBg img {
+    height: 25px !important;
+}
+
+.SearchMain {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    bottom: 45px;
+    overflow-y: auto;
+    padding: 10px 100px;
+}
+
+.SearchCard {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+}
+
+.SearchCard:hover {
+    -moz-box-shadow: 5px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.SearchCardTop {
+    /*卡片顶部*/
+    width: 100%;
+}
+
+.SearchCardTop img {
+    width: 40%;
+    height: 240px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+    margin-bottom: -40px;
+}
+
+.SearchCardTop div {
+    width: 60%;
+    max-height: 200px;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.SearchCardTop div h3 {
+    margin: 10px;
+}
+
+.SearchCardTop div p {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+
+.SearchCardTool {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    height: 40px;
+}
+
+.SearchCardTool button {
+    height: 40px !important;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.SearchCardBottom {
+    width: 100%;
+    max-height: 300px;
+    border-top: 1px solid #ccc;
+    display: none;
+}
+
+.SearchCardLeft {
+    width: 50%;
+    max-height: 300px;
+    float: left;
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+}
+
+.SearchCardLeft h3 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.SearchCardLeftDetail {
+    padding: 10px 0px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.SearchCardLeftDetail h4 {
+    margin-bottom: 5px;
+}
+
+.SearchCardLeftDetail h5 {
+    margin-bottom: 10px;
+}
+
+.SearchCardRight {
+    width: 50%;
+    max-height: 300px;
+    float: left;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.SearchCardRight h3 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.SearchCardRightDetail {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid #e6e6e6;
+    display: inline-block;
+}
+
+.SearchCardRightDetail h4 {
+    float: left;
+}
+
+.SearchMainOrder {
+    /*个人订单*/
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
